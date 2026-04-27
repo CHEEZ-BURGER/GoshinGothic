@@ -4,7 +4,7 @@
 
 고신고딕은 [프리텐다드(Pretendard)](https://cactus.tistory.com/306)를 기반으로, 신문 편집에 자주 쓰이는 특수기호·한자 자형을 전통적인 출판 관행에 맞게 수정한 오픈소스 폰트입니다. 고려대학교 학보사 [고대신문](https://kunews.ac.kr) 디자인 시스템의 일부로 개발되었습니다.
 
-> 📖 **[소개 페이지 바로가기 →](https://ytbg0512.github.io/Introducing-GoshinGothic/)**
+> 📖 **[소개 페이지 바로가기 →](https://kunews.github.io/GoshinGothic/)**
 
 ---
 
