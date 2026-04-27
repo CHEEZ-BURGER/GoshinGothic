@@ -1,6 +1,6 @@
 # 고신고딕 GoshinGothic
 
-**따옴표를 다듬은 한글 고딕체**
+**따옴표를 다듬은 한국어 고딕체**
 
 고신고딕은 [프리텐다드(Pretendard)](https://github.com/orioncactus/pretendard)를 기반으로, 신문 편집에 자주 쓰이는 특수기호·한자 자형을 전통적인 출판 관행에 맞게 수정한 오픈소스 폰트입니다. 고려대학교 학보사 [고대신문](https://kunews.ac.kr) 디자인 시스템의 일부로 개발되었습니다.
 
