@@ -1,0 +1,24 @@
+FONTLOG for GoshinGothic
+
+This file provides information on the changes made to this font software.
+
+Modified font:
+- GoshinGothic
+
+Source fonts:
+- Pretendard
+- Noto Sans Korean
+
+Contributor:
+- The Korea University Weekly
+
+Detailed changes:
+- Most glyphs and base font data were taken from Pretendard.
+- Hanja glyphs were imported from Noto Sans Korean.
+- Quotation mark, comma, and inequality sign glyphs were newly designed for this modified version.
+- The font was renamed for redistribution as a modified version.
+- Font metadata and copyright information were updated for release.
+
+Release history:
+- Version 2.350 (2026-05-03)
+  First public release.
