@@ -131,8 +131,8 @@ body {
 | 역할 | 프로젝트 |
 | --- | --- |
 | **수정 및 배포** | [고대신문사](https://kunews.ac.kr) |
-| **원본 폰트** | [Pretendard](https://cactus.tistory.com/306) — 길형진 |
-| **한자 글리프** | [Noto Sans Korean](https://fonts.google.com/noto/specimen/Noto+Sans+KR) — Google |
+| **원본 폰트** | [Pretendard](https://cactus.tistory.com/306) |
+| **한자 글리프** | [Noto Sans Korean](https://fonts.google.com/noto/specimen/Noto+Sans+KR) |
 
 ---
 
