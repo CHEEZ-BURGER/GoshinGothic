@@ -173,90 +173,7 @@ a {
 /* ───────────────────────────────────────
    Hero — Pair B
    ─────────────────────────────────────── */
-.hero {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 4rem 2rem 4rem;
-  text-align: center;
-  background: var(--b-bg);
-  overflow: hidden;
-}
 
-/* Animated gradient blobs container */
-.hero-blobs {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  filter: blur(80px);
-  opacity: 0.6;
-}
-
-.hero-blob {
-  position: absolute;
-  border-radius: 50%;
-  will-change: transform;
-}
-
-.hero-blob--1 {
-  width: 55vw;
-  height: 55vw;
-  max-width: 700px;
-  max-height: 700px;
-  top: -10%;
-  left: -10%;
-  background: radial-gradient(circle, rgba(255, 32, 92, 0.35) 0%, transparent 70%);
-  animation: blobDrift1 7s ease-in-out infinite;
-}
-
-.hero-blob--2 {
-  width: 45vw;
-  height: 45vw;
-  max-width: 580px;
-  max-height: 580px;
-  top: 40%;
-  right: -8%;
-  background: radial-gradient(circle, rgba(255, 80, 120, 0.30) 0%, transparent 70%);
-  animation: blobDrift2 9s ease-in-out infinite;
-}
-
-.hero-blob--3 {
-  width: 40vw;
-  height: 40vw;
-  max-width: 520px;
-  max-height: 520px;
-  bottom: -5%;
-  left: 20%;
-  background: radial-gradient(circle, rgba(255, 32, 92, 0.25) 0%, transparent 70%);
-  animation: blobDrift3 8s ease-in-out infinite;
-}
-
-.hero-blob--4 {
-  width: 35vw;
-  height: 35vw;
-  max-width: 450px;
-  max-height: 450px;
-  top: 15%;
-  right: 25%;
-  background: radial-gradient(circle, rgba(255, 140, 160, 0.28) 0%, transparent 70%);
-  animation: blobDrift4 11s ease-in-out infinite;
-}
-
-.hero-blob--5 {
-  width: 50vw;
-  height: 50vw;
-  max-width: 640px;
-  max-height: 640px;
-  top: 55%;
-  left: -15%;
-  background: radial-gradient(circle, rgba(255, 60, 100, 0.22) 0%, transparent 70%);
-  animation: blobDrift5 10s ease-in-out infinite;
-}
 
 @keyframes blobDrift1 {
 
@@ -367,18 +284,10 @@ a {
   opacity: 0.4;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  display: inline-block;
-  text-align: left;
-}
-
 .hero-label {
   font-size: 0.9375rem;
   font-weight: 600;
   color: var(--b-ink-muted);
-  margin-bottom: 0.75rem;
   opacity: 0;
   transform: translateY(16px);
   animation: heroFadeIn 0.7s 0.1s var(--ease-out-expo) forwards;
@@ -416,7 +325,7 @@ a {
   bottom: 0.15em;
   width: 3px;
   background: var(--accent);
-  border-radius: 2px;
+  border-radius: 0px;
   animation: cursorBlink 0.55s steps(2, start) infinite;
 }
 
@@ -446,7 +355,7 @@ a {
   height: 0.22em;
   background: var(--accent-glow-strong);
   z-index: -1;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 
 .hero-headline.typing-done .highlight::after {
@@ -459,31 +368,8 @@ a {
   }
 }
 
-/* Scroll indicator — Pair B */
-.hero-scroll {
-  position: absolute;
-  bottom: 2.5rem;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  color: var(--b-ink-faint);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  opacity: 0;
-  animation: heroFadeIn 0.6s 1.8s var(--ease-out-expo) forwards;
-}
-
-.hero-scroll-line {
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid var(--accent);
-  border-bottom: 2px solid var(--accent);
-  transform: rotate(45deg);
-  animation: arrowBounce 2s ease-in-out infinite;
+#canvas-container {
+  opacity: 50%;
 }
 
 @keyframes arrowBounce {
@@ -571,12 +457,18 @@ a {
 .weight-card:first-child {
   border-top: 1px solid var(--b-border);
 }
-
-
-
+.feature-desc{
+  margin-bottom: 1.25rem;
+}
+.feature-number{
+  color: var(--accent);
+  font-size: 2rem;
+  font-size: 800;
+  font-family: 'GoshinGothic';
+}
 .weight-label {
   display: block;
-  font-size: 0.6875rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--accent);
   flex-shrink: 0;
@@ -624,35 +516,14 @@ a {
   padding: 2rem;
   position: relative;
   overflow: hidden;
-}
-
-.feature-number {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--accent);
-  margin-bottom: 1.25rem;
-  display: block;
-  line-height: 1;
-}
-
-.feature-name {
-  font-size: 1.125rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--a-ink);
-}
-
-.feature-desc {
-  font-size: 0.875rem;
-  line-height: 1.8;
-  color: var(--a-ink);
-  text-align: justify;
+  display: flex;
+  flex-direction: column;
 }
 
 .feature-img {
   display: block;
   width: 100%;
-  margin-top: 1.25rem;
+  margin-top: auto;
   border-radius: 10px;
   background: var(--a-bg);
   object-fit: contain;
@@ -695,6 +566,7 @@ a {
 .glyph-weight-btn:hover {
   color: var(--b-ink);
   border-color: var(--b-ink-faint);
+  padding: 0.5rem 2.25rem;
 }
 
 .glyph-weight-btn.active {
@@ -711,7 +583,6 @@ a {
   border: 1px solid var(--b-border);
   border-radius: 14px;
   overflow: hidden;
-  transition: font-weight 0.15s ease;
 }
 
 .glyph-cell {
@@ -725,9 +596,150 @@ a {
   color: var(--b-ink);
   background: var(--b-bg);
   cursor: default;
+  transition: transform 0.4s var(--ease-out-expo), opacity 0.4s var(--ease-out-expo);
+}
+
+.glyph-cell.ripple {
+  animation: rippleOut 0.5s var(--ease-out-expo) forwards;
+}
+
+@keyframes rippleOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 
+
+/* ───────────────────────────────────────
+   Type Tester — Pair B
+   ─────────────────────────────────────── */
+.type-tester {
+  padding: var(--section-padding);
+  background: var(--b-bg);
+  border-top: 1px solid var(--b-border);
+}
+
+.type-tester-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.type-tester-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--b-ink);
+  margin-bottom: 0.5rem;
+}
+
+.type-tester-desc {
+  font-size: 1rem;
+  color: var(--b-ink-muted);
+  margin-bottom: 2rem;
+}
+
+.type-tester-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.type-weight-controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.type-weight-btn {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--b-border);
+  border-radius: 100px;
+  background: var(--b-bg);
+  color: var(--b-ink-muted);
+  cursor: pointer;
+  transition: all 0.25s var(--ease-out-expo);
+}
+
+.type-weight-btn:hover {
+  color: var(--b-ink);
+  border-color: var(--b-ink-faint);
+  padding: 0.5rem 2.25rem;
+}
+
+.type-weight-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.type-size-control {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--b-ink-muted);
+  font-size: 0.875rem;
+}
+
+.type-size-control input[type="range"] {
+  width: 120px;
+  accent-color: var(--accent);
+}
+
+.type-size-value {
+  font-weight: 600;
+  color: var(--b-ink);
+  min-width: 50px;
+}
+
+.type-tester-input {
+  width: 100%;
+  padding: 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--b-ink);
+  background: var(--b-bg);
+  border: 1px solid var(--b-border);
+  border-radius: 12px;
+  resize: vertical;
+  margin-bottom: 1.5rem;
+}
+
+.type-tester-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.type-tester-input::placeholder {
+  color: var(--b-ink-faint);
+}
+
+.type-tester-output {
+  font-family: var(--font-display);
+  color: var(--b-ink);
+  line-height: 1.4;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  min-height: 120px;
+  padding: 1rem;
+  background: var(--b-bg);
+  border: 1px solid var(--b-border);
+  border-radius: 12px;
+}
 
 /* ───────────────────────────────────────
    CTA — Pair A
@@ -781,6 +793,10 @@ a {
   border-radius: 100px;
   text-decoration: none;
   cursor: pointer;
+  transition: 0.8s var(--ease-out-expo)
+}
+.cta-button:hover {
+  font-size: 1rem;
 }
 
 /* ───────────────────────────────────────
@@ -801,47 +817,101 @@ a {
   opacity: 0.6;
 }
 
+ /* ───────────────────────────────────────
+   Hero — Physics Canvas Version
+   ─────────────────────────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* 화면 전체 높이 확보 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  background: var(--b-bg);
+  z-index: 1;
+}
+
+#canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; 
+  pointer-events: auto;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: left;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--b-ink-faint);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  animation: heroFadeIn 0.6s 1.8s var(--ease-out-expo) forwards;
+}
+
+.hero-scroll-line {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  transform: rotate(45deg);
+  animation: arrowBounce 2s ease-in-out infinite;
+}
+
 /* ───────────────────────────────────────
-   Responsive
+   Responsive (이 아래로는 미디어 쿼리 블록만 존재해야 합니다)
    ─────────────────────────────────────── */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
-
   .weight-card {
     flex-direction: column;
     gap: 0.5rem;
   }
-
   .weight-label {
     width: auto;
   }
-
   .feature-list {
     grid-template-columns: 1fr;
   }
-
   .feature-item {
     flex-direction: column;
     gap: 0.75rem;
   }
-
   .glyph-grid {
     grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
   }
-
   .footer {
     flex-direction: column;
     gap: 0.75rem;
     text-align: center;
   }
-
   .intro-body {
     border-left: none;
     padding-left: 0;
   }
-
   .intro-inner {
     display: flex;
     flex-direction: column;
@@ -852,20 +922,16 @@ a {
   .hero-headline {
     font-size: clamp(2rem, 10vw, 3rem);
   }
-
   .glyph-grid {
     grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
   }
-
   .glyph-cell {
     font-size: 1.25rem;
   }
-
   .intro-body {
     border-left: none;
     padding-left: 0;
   }
-
   .intro-inner {
     display: flex;
     flex-direction: column;
